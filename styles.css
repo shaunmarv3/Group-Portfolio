@@ -1,48 +1,278 @@
-.body
-{
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+    background-color: rgb(26, 26, 26);
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: rgb(43, 45, 48);
+    width: 98%;
+    height: 60px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    color: green;
+    font-size: 50px;
+}
+
+.theme {
+    height: 40px;
+    width: 40px;
+}
+
+.main-container {
+    text-align: center;
+}
+
+.heading {
+    color: #f0f0f0;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center the cards horizontally */
+    max-width: 1200px; /* Adjust based on your needs */
+    margin: auto;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
-    width: 100%;
-    background-color: rgb(26, 26, 26);
 }
-.card
-{
-    height: 400px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+
+.card-front {
     background-color: rgb(68, 68, 68);
-    border-radius: 10px;
+    color: #f0f0f0;
+    flex-direction: column;
+    text-align: center;
 }
-body
-{
-    background-color: rgb(26, 26, 26);
-}
-.img
-{
+
+.img1 {
     height: 150px;
     width: 150px;
     border-radius: 50%;
-    border:  1px solid;
+    border: 2px solid #555;
     background-image: url("chadyash.jpg");
     background-size: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
 }
-.info{
-    height: 140px;
+
+.card-front:hover .img1 {
+    transform: scale(1.05);
+}
+
+.info {
     width: 80%;
     border-radius: 10px;
     text-align: center;
     background-color: rgb(68, 68, 68);
     color: white;
-    align-items: center;
-    justify-content: center;
     font-family: "Chakra Petch", sans-serif;
     font-weight: 600;
-    font-style: normal;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.card-back {
+    background-color: rgb(68, 68, 68);
+    color: #f0f0f0;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid #555;
+}
+
+.card-header .name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.card-content {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-content .text-box {
+    background-color: rgb(90, 90, 90);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 250px;
+    text-align: center;
+}
+
+.card-content ul.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: auto 0 0;
+}
+
+.card-content ul.social-icons .icon-content {
+    margin: 0 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card-content ul.social-icons .icon-content:hover {
+    transform: scale(1.1);
+}
+
+.card-content ul.social-icons .icon-content .tooltip {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.card-content ul.social-icons .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+}
+
+.card-content ul.social-icons .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-content ul.social-icons .icon-content a:hover {
+    box-shadow: 3px 2px 45px rgba(0, 0, 0, 0.12);
+    background-color: #333;
+}
+
+.card-content ul.social-icons .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    transition: fill 0.3s ease;
+}
+
+.card-content ul.social-icons .icon-content a:hover {
+    color: white;
+}
+
+.card-content ul.social-icons .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: height 0.3s ease;
+}
+
+.card-content ul.social-icons .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.card-content ul.social-icons .icon-content a[data-social="linkedin"] .filled,
+.card-content ul.social-icons .icon-content a[data-social="linkedin"] ~ .tooltip {
+    background-color: #0274b3;
+}
+
+.card-content ul.social-icons .icon-content a[data-social="github"] .filled,
+.card-content ul.social-icons .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #24262a;
+}
+
+.card-content ul.social-icons .icon-content a[data-social="instagram"] .filled,
+.card-content ul.social-icons .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+        45deg,
+        #405de6,
+        #5b51db,
+        #b33ab4,
+        #c135b4,
+        #e1306c,
+        #fd1f1f
+    );
+}
+
+.card-content ul.social-icons .icon-content a[data-social="youtube"] .filled,
+.card-content ul.social-icons .icon-content a[data-social="youtube"] ~ .tooltip {
+    background-color: #ff0000;
 }
