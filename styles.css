@@ -9,31 +9,7 @@ body {
     color: #f0f0f0;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
-}
-html {
-    overflow-y: auto;
-}
-.navbar {
-    background-color: rgb(43, 45, 48);
-    width: 98%;
-    height: 60px;
-    margin: 10px;
-    border-radius: 10px;
-    border: 2px solid green;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.logo {
-    font-family: "Chakra Petch", sans-serif;
-    font-weight: 500;
-    color: #39FF14;
-    font-size: 50px;
-}
-.container {
-    width: 100%;
+     width: 100%;
     height: 100%;
     --color: rgba(0, 115, 19, 0.3);
     background-color: #191a1a;
@@ -62,7 +38,29 @@ html {
         transparent
       );
     background-size: 55px 55px;
-  }
+}
+html {
+    overflow-y: auto;
+}
+.navbar {
+    background-color: rgb(43, 45, 48);
+    width: 98%;
+    height: 60px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 500;
+    color: #39FF14;
+    font-size: 50px;
+}
 .theme {
     height: 40px;
     width: 40px;
