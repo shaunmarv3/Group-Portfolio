@@ -7,18 +7,43 @@
     align-items: center;
     height: 600px;
     width: 100%;
-
-
+    background-color: rgb(26, 26, 26);
 }
 .card
 {
-    height: 200px;
-    width: 150px;
-    border: black 1px solid;
+    height: 400px;
+    width: 300px;
+    border: black 2px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(68, 68, 68);
 }
 body
 {
-    width: 100%;
-
-    height: 100%;
+    background-color: rgb(26, 26, 26);
+}
+.img
+{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border:  1px solid;
+    background-image: url("chadyash.jpg");
+    background-size: cover;
+}
+.info{
+    height: 140px;
+    width: 80%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(68, 68, 68);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
