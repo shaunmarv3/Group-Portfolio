@@ -50,9 +50,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 50px; /* Space between cards */
-    justify-content: space-around; /* Center the cards horizontally */
+    justify-content: space-evenly; /* Center the cards horizontally */
     max-width: 1200px;
-    flex-shrink: 2;/* Adjust based on your needs */
+
 
 }
 
@@ -62,6 +62,7 @@ body {
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+
 
 }
 
@@ -281,4 +282,12 @@ body {
 .card-content ul.social-icons .icon-content a[data-social="youtube"] .filled,
 .card-content ul.social-icons .icon-content a[data-social="youtube"] ~ .tooltip {
     background-color: #ff0000;
+}
+.row1
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
 }
