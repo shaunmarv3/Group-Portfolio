@@ -125,12 +125,12 @@ html {
 .img1 {
     height: 150px;
     width: 150px;
-    border-radius: 50%;
     border: 2px solid #555;
-    background-image: url("chadyash.jpg");
     background-size: cover;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .card-front:hover .img1 {
