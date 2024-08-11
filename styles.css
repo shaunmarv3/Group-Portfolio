@@ -327,27 +327,5 @@ html {
     flex-direction: column;
     justify-content: space-between;
     gap: 50px;
-::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-}
-
-::-webkit-scrollbar-track {
-    background: #000; /* Background of the scrollbar track */
-}
-
-::-webkit-scrollbar-thumb {
-    background: #39FF14; /* Neon green color for the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
-    transition: background 0.3s; /* Smooth transition for hover effect */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #00FF00; /* Brighter neon green on hover */
-}
-
-/* For Firefox */
-* {
-    scrollbar-width: thin; /* Thin scrollbar */
-    scrollbar-color: #39FF14 #000; /* Neon green thumb, black track */
 }
 
