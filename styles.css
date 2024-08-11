@@ -48,7 +48,7 @@ html {
     height: 60px;
     margin: 10px;
     border-radius: 10px;
-    border: 2px solid green;
+    border: 2px solid lime;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,11 +112,12 @@ html {
     justify-content: center;
     align-items: center;
     width: 300px;
+    background-color: rgb(13 26 16 / 74%);
     height: 500px;
+    border: 2px solid lime;
 }
 
 .card-front {
-    background-color: rgb(68, 68, 68);
     color: #f0f0f0;
     flex-direction: column;
     text-align: center;
@@ -140,8 +141,8 @@ html {
     width: 80%;
     border-radius: 10px;
     text-align: center;
-    background-color: rgb(68, 68, 68);
-    color: white;
+    background-color: #39ff1400;
+    color: #39ff14;
     font-family: "Chakra Petch", sans-serif;
     font-weight: 600;
     margin-top: 10px;
@@ -149,7 +150,6 @@ html {
 }
 
 .card-back {
-    background-color: rgb(68, 68, 68);
     color: #f0f0f0;
     transform: rotateY(180deg);
     display: flex;
