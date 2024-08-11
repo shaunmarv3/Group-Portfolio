@@ -7,10 +7,8 @@ body {
     margin: 0;
     background-color: rgb(26, 26, 26);
     color: #f0f0f0;
-    overflow-x: hidden;
     font-family: Arial, sans-serif;
      width: 100%;
-    overflow-x:hidden;
     height:auto;
     --color: rgba(0, 115, 19, 0.3);
     background-color: #191a1a;
