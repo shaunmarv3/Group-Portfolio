@@ -1,16 +1,20 @@
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: fit-content;
     margin: 0;
     background-color: rgb(26, 26, 26);
     color: #f0f0f0;
+    overflow-y: auto;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
-     width: 100%;
-    height: 100%;
+    width: 100%;
     --color: rgba(0, 115, 19, 0.3);
     background-color: #191a1a;
     background-image: linear-gradient(
@@ -38,9 +42,6 @@ body {
         transparent
       );
     background-size: 55px 55px;
-}
-html {
-    overflow-y: auto;
 }
 .navbar {
     background-color: rgb(43, 45, 48);
