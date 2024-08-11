@@ -327,9 +327,8 @@ html {
     flex-direction: column;
     justify-content: space-between;
     gap: 50px;
-}
 ::-webkit-scrollbar {
-    width: 6px; /* Width of the scrollbar */
+    width: 12px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
