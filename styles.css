@@ -4,14 +4,14 @@ html {
 }
 
 body {
+    min-height: 100vh;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
     background-color: rgb(26, 26, 26);
     color: #f0f0f0;
-    overflow-y: auto;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
     width: 100%;
@@ -28,8 +28,8 @@ body {
         var(--color) 76%,
         transparent 77%,
         transparent
-      ),
-      linear-gradient(
+    ),
+    linear-gradient(
         45deg,
         transparent 24%,
         var(--color) 35%,
@@ -40,9 +40,10 @@ body {
         var(--color) 76%,
         transparent 77%,
         transparent
-      );
+    );
     background-size: 55px 55px;
 }
+
 .navbar {
     background-color: rgb(43, 45, 48);
     width: 98%;
