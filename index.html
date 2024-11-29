@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CyberSprinters</title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -49,80 +49,109 @@
                              linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
             background-size: 20px 20px;
         }
+        
+        /* Mobile Responsiveness Improvements */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 4rem !important;
+            }
+            .team-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .team-card-avatar {
+                margin-bottom: 1rem;
+                margin-right: 0 !important;
+            }
+            .team-card-icons {
+                justify-content: center;
+            }
+            .project-card {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body class="min-h-screen bg-black bg-grid">
     <!-- Hero Section -->
-    <header class="h-screen flex items-center justify-center relative overflow-hidden">
+    <header class="h-screen flex items-center justify-center relative overflow-hidden px-4">
         <div class="text-center z-10">
-            <h1 class="crazy-font text-8xl md:text-9xl text-white neon-text text-glitch mb-4">
+            <h1 class="crazy-font hero-title text-6xl sm:text-8xl md:text-9xl text-white neon-text text-glitch mb-4">
                 CyberSprinters
             </h1>
-            <p class="text-gray-400 text-xl md:text-2xl">Innovating at Sprint Speed</p>
+            <p class="text-gray-400 text-lg sm:text-xl md:text-2xl">Innovating at Sprint Speed</p>
         </div>
     </header>
 
     <!-- Team Section -->
     <section class="py-20 px-4">
-        <h2 class="crazy-font text-6xl text-center mb-16 text-white neon-text">The Team</h2>
+        <h2 class="crazy-font text-4xl sm:text-6xl text-center mb-16 text-white neon-text">The Team</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div class="card-hover bg-gray-900 p-8 rounded-2xl border border-gray-800">
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-24 h-24 bg-gradient-to-br from-purple-600 to-pink-500 rounded-xl"></div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-1">Sushan Shetty</h3>
+            <div class="card-hover bg-gray-900 p-6 sm:p-8 rounded-2xl border border-gray-800">
+                <div class="flex team-card items-center space-x-0 sm:space-x-4 mb-6 flex-col sm:flex-row">
+                    <div class="team-card-avatar w-24 h-24 bg-gradient-to-br from-purple-600 to-pink-500 rounded-xl mb-4 sm:mb-0 sm:mr-4"></div>
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">Sushan Shetty</h3>
                         <p class="text-green-400">Team Lead</p>
                     </div>
                 </div>
-                <p class="text-gray-400 mb-4">Strategic thinker driving the team's vision and technological innovation.</p>
-                <div class="flex space-x-4">
+                <p class="text-gray-400 mb-4 text-center sm:text-left">Strategic thinker driving the team's vision and technological innovation.</p>
+                <div class="team-card-icons flex justify-center sm:justify-start space-x-4">
                     <i class="bi bi-github text-2xl text-white"></i>
                     <i class="bi bi-linkedin text-2xl text-white"></i>
+                    <i class="bi bi-instagram text-2xl text-white"></i>
+                    <i class="bi bi-envelope text-2xl text-white"></i>
                 </div>
             </div>
 
-            <div class="card-hover bg-gray-900 p-8 rounded-2xl border border-gray-800">
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-24 h-24 bg-gradient-to-br from-cyan-600 to-blue-500 rounded-xl"></div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-1">Samar Rihan</h3>
+            <div class="card-hover bg-gray-900 p-6 sm:p-8 rounded-2xl border border-gray-800">
+                <div class="flex team-card items-center space-x-0 sm:space-x-4 mb-6 flex-col sm:flex-row">
+                    <div class="team-card-avatar w-24 h-24 bg-gradient-to-br from-cyan-600 to-blue-500 rounded-xl mb-4 sm:mb-0 sm:mr-4"></div>
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">Samar Rihan</h3>
                         <p class="text-green-400">UX/UI Designer</p>
                     </div>
                 </div>
-                <p class="text-gray-400 mb-4">Creates intuitive and visually stunning user interfaces that elevate user experience.</p>
-                <div class="flex space-x-4">
-                    <i class="bi bi-behance text-2xl text-white"></i>
-                    <i class="bi bi-dribbble text-2xl text-white"></i>
+                <p class="text-gray-400 mb-4 text-center sm:text-left">Creates intuitive and visually stunning user interfaces that elevate user experience.</p>
+                <div class="team-card-icons flex justify-center sm:justify-start space-x-4">
+                    <i class="bi bi-github text-2xl text-white"></i>
+                    <i class="bi bi-linkedin text-2xl text-white"></i>
+                    <i class="bi bi-instagram text-2xl text-white"></i>
+                    <i class="bi bi-envelope text-2xl text-white"></i>
                 </div>
             </div>
 
-            <div class="card-hover bg-gray-900 p-8 rounded-2xl border border-gray-800">
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-24 h-24 bg-gradient-to-br from-red-600 to-yellow-500 rounded-xl"></div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-1">Shaun Marvel</h3>
+            <div class="card-hover bg-gray-900 p-6 sm:p-8 rounded-2xl border border-gray-800">
+                <div class="flex team-card items-center space-x-0 sm:space-x-4 mb-6 flex-col sm:flex-row">
+                    <div class="team-card-avatar w-24 h-24 bg-gradient-to-br from-red-600 to-yellow-500 rounded-xl mb-4 sm:mb-0 sm:mr-4"></div>
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">Shaun Marvel</h3>
                         <p class="text-green-400">Backend Developer</p>
                     </div>
                 </div>
-                <p class="text-gray-400 mb-4">Backend wizard crafting robust and scalable server-side solutions.</p>
-                <div class="flex space-x-4">
-                    <i class="bi bi-stack-overflow text-2xl text-white"></i>
-                    <i class="bi bi-medium text-2xl text-white"></i>
+                <p class="text-gray-400 mb-4 text-center sm:text-left">Backend wizard crafting robust and scalable server-side solutions.</p>
+                <div class="team-card-icons flex justify-center sm:justify-start space-x-4">
+                    <i class="bi bi-github text-2xl text-white"></i>
+                    <i class="bi bi-linkedin text-2xl text-white"></i>
+                    <i class="bi bi-instagram text-2xl text-white"></i>
+                    <i class="bi bi-envelope text-2xl text-white"></i>
                 </div>
             </div>
 
-            <div class="card-hover bg-gray-900 p-8 rounded-2xl border border-gray-800">
-                <div class="flex items-center space-x-4 mb-6">
-                    <div class="w-24 h-24 bg-gradient-to-br from-green-600 to-emerald-500 rounded-xl"></div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-1">Yash Maurya</h3>
+            <div class="card-hover bg-gray-900 p-6 sm:p-8 rounded-2xl border border-gray-800">
+                <div class="flex team-card items-center space-x-0 sm:space-x-4 mb-6 flex-col sm:flex-row">
+                    <div class="team-card-avatar w-24 h-24 bg-gradient-to-br from-green-600 to-emerald-500 rounded-xl mb-4 sm:mb-0 sm:mr-4"></div>
+                    <div class="text-center sm:text-left">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">Yash Maurya</h3>
                         <p class="text-green-400">DevOps Engineer</p>
                     </div>
                 </div>
-                <p class="text-gray-400 mb-4">Ensures smooth deployment, integration, and system reliability.</p>
-                <div class="flex space-x-4">
-                    <i class="bi bi-discord text-2xl text-white"></i>
-                    <i class="bi bi-twitter-x text-2xl text-white"></i>
+                <p class="text-gray-400 mb-4 text-center sm:text-left">Ensures smooth deployment, integration, and system reliability.</p>
+                <div class="team-card-icons flex justify-center sm:justify-start space-x-4">
+                    <i class="bi bi-github text-2xl text-white"></i>
+                    <i class="bi bi-linkedin text-2xl text-white"></i>
+                    <i class="bi bi-instagram text-2xl text-white"></i>
+                    <i class="bi bi-envelope text-2xl text-white"></i>
                 </div>
             </div>
         </div>
@@ -130,29 +159,23 @@
 
     <!-- Projects Section -->
     <section class="py-20 px-4">
-        <h2 class="crazy-font text-6xl text-center mb-16 text-white neon-text">Our Projects</h2>
+        <h2 class="crazy-font text-4xl sm:text-6xl text-center mb-16 text-white neon-text">Our Projects</h2>
         <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>
     </section>
 
     <script>
         const projects = [
             {
-                name: "Neural Network",
-                description: "AI-powered content creation platform",
-                githubRepo: "https://github.com/CyberSprinters/neural-network",
-                website: "https://neural-network.cybersprinters.tech"
+                name: "SustainEarth",
+                description: "Empowering Sustainable Development Through Technology ",
+                githubRepo: "https://github.com/sushanshetty1/Sustain-Earth",
+                website: "https://sustainearth.vercel.app/"
             },
             {
-                name: "Digital Nexus",
-                description: "Blockchain-based digital asset marketplace",
-                githubRepo: "https://github.com/CyberSprinters/digital-nexus",
+                name: "EduVault",
+                description: "EduVault is a comprehensive platform designed to assist students in their examination preparation. It covers various competitive exams such as GATE, JEE, KCET, and NEET-UG, providing students with the resources they need to explore and master their desired topics.",
+                githubRepo: "https://github.com/sushanshetty1/EduVault",
                 website: "https://digitalnexus.cybersprinters.tech"
-            },
-            {
-                name: "Cyber Sanctuary",
-                description: "Next-gen cybersecurity solution",
-                githubRepo: "https://github.com/CyberSprinters/cyber-sanctuary",
-                website: "https://cybersanctuary.cybersprinters.tech"
             }
         ];
 
@@ -168,9 +191,9 @@
                 const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
                 
                 container.innerHTML += `
-                    <div class="card-hover bg-gray-900 p-6 rounded-2xl border border-gray-800">
+                    <div class="project-card card-hover bg-gray-900 p-6 rounded-2xl border border-gray-800">
                         <div class="h-48 bg-gradient-to-br ${randomGradient} rounded-xl mb-4"></div>
-                        <h3 class="text-2xl font-bold text-white mb-2">${project.name}</h3>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">${project.name}</h3>
                         <p class="text-gray-400 mb-4">${project.description}</p>
                         <div class="flex space-x-4">
                             <a href="${project.githubRepo}" target="_blank" class="text-white hover:text-green-400 transition duration-300">
