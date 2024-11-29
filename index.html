@@ -132,32 +132,27 @@
     <section class="py-20 px-4">
         <h2 class="crazy-font text-6xl text-center mb-16 text-white neon-text">Our Projects</h2>
         <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"></div>
-        
-        <div class="mt-16 max-w-md mx-auto bg-gray-900 p-8 rounded-2xl border border-gray-800">
-            <h3 class="text-2xl font-bold text-white mb-6">Upload Project</h3>
-            <form id="project-form" class="space-y-4">
-                <input type="text" id="project-name" placeholder="Project Name" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-green-400 focus:outline-none">
-                <textarea id="project-description" placeholder="Project Description" class="w-full p-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-green-400 focus:outline-none h-32"></textarea>
-                <button type="submit" class="w-full bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white p-3 rounded-lg transition duration-300">
-                    Initialize Project
-                </button>
-            </form>
-        </div>
     </section>
 
     <script>
         const projects = [
             {
                 name: "Neural Network",
-                description: "AI-powered content creation platform"
+                description: "AI-powered content creation platform",
+                githubRepo: "https://github.com/CyberSprinters/neural-network",
+                website: "https://neural-network.cybersprinters.tech"
             },
             {
                 name: "Digital Nexus",
-                description: "Blockchain-based digital asset marketplace"
+                description: "Blockchain-based digital asset marketplace",
+                githubRepo: "https://github.com/CyberSprinters/digital-nexus",
+                website: "https://digitalnexus.cybersprinters.tech"
             },
             {
                 name: "Cyber Sanctuary",
-                description: "Next-gen cybersecurity solution"
+                description: "Next-gen cybersecurity solution",
+                githubRepo: "https://github.com/CyberSprinters/cyber-sanctuary",
+                website: "https://cybersanctuary.cybersprinters.tech"
             }
         ];
 
@@ -176,23 +171,19 @@
                     <div class="card-hover bg-gray-900 p-6 rounded-2xl border border-gray-800">
                         <div class="h-48 bg-gradient-to-br ${randomGradient} rounded-xl mb-4"></div>
                         <h3 class="text-2xl font-bold text-white mb-2">${project.name}</h3>
-                        <p class="text-gray-400">${project.description}</p>
+                        <p class="text-gray-400 mb-4">${project.description}</p>
+                        <div class="flex space-x-4">
+                            <a href="${project.githubRepo}" target="_blank" class="text-white hover:text-green-400 transition duration-300">
+                                <i class="bi bi-github text-2xl"></i>
+                            </a>
+                            <a href="${project.website}" target="_blank" class="text-white hover:text-green-400 transition duration-300">
+                                <i class="bi bi-globe text-2xl"></i>
+                            </a>
+                        </div>
                     </div>
                 `;
             });
         }
-
-        document.getElementById('project-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('project-name').value;
-            const description = document.getElementById('project-description').value;
-            
-            if (name && description) {
-                projects.push({ name, description });
-                renderProjects();
-                e.target.reset();
-            }
-        });
 
         renderProjects();
     </script>
